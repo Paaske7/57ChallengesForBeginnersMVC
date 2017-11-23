@@ -1,0 +1,24 @@
+﻿@model WebApplication1.Models.Class1
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>What is your name: @Html.TextBoxFor(x => x.Name) </p>
+   
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>

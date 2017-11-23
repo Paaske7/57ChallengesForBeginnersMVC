@@ -1,0 +1,28 @@
+﻿@model Opgave_4.Models.Words
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StartPage</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>What is the noun? @Html.TextBoxFor(x => x.Noun) </p>
+        <p>What is the verb? @Html.TextBoxFor(x => x.Verb) </p>
+        <p>What is the adjective? @Html.TextBoxFor(x => x.Adjective)</p>
+        <p>What is the adverb? @Html.TextBoxFor(x => x.Adverb)</p>
+
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
+

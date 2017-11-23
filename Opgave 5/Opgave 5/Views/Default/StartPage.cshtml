@@ -1,0 +1,26 @@
+﻿@model Opgave_5.Models.Numbers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StartPage</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>What is the first number? @Html.TextBoxFor(x => x.Number1) </p>
+        <p>What is the second number? @Html.TextBoxFor(x => x.Number2) </p>
+
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
+

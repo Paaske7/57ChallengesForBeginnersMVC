@@ -1,0 +1,26 @@
+﻿@model Opgave_6.Models.Ages
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StartPage</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>How old are you? @Html.TextBoxFor(x => x.Age) </p>
+        <p>What age do you want to retire? @Html.TextBoxFor(x => x.RetireAge) </p>
+        
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
+

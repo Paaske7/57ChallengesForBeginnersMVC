@@ -1,0 +1,25 @@
+﻿@model Opgave3.Models.Word
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StartPage</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>What is your quote: @Html.TextBoxFor(x => x.Quote) </p>
+        <p>What is your author: @Html.TextBoxFor(x => x.Author) </p>
+
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
