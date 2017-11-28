@@ -1,0 +1,25 @@
+﻿@model Opgave_8.Models.Propss
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>How many people? @Html.TextBoxFor(x => x.People) </p>
+        <p>How many pizzas do you have? @Html.TextBoxFor(x => x.Pizza) </p>
+
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
+

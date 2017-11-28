@@ -1,0 +1,25 @@
+﻿@model Opgave_7.Models.Propertiess
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>What is the length of the room in feet? @Html.TextBoxFor(x => x.Length) </p>
+        <p>What is the width of the room in feet? @Html.TextBoxFor(x => x.Width) </p>
+
+        <input type="submit" value="Submit" />
+
+    }
+</body>
+</html>
+
